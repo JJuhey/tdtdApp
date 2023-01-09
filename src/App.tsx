@@ -1,4 +1,5 @@
 import React from 'react';
+import { Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import {
   createBottomTabNavigator,
@@ -32,33 +33,74 @@ const App = () => {
         screenOptions={{
           headerShown: false,
           tabBarShowLabel: false,
-          // tabBarIcon: ({ focused, color, size }) => {
-          //   const iconName = focused
-          //     ? 'ios-information'
-          //     : 'ios-information-outline';
-
-          //   return <Ionicons name={iconName} size={size} color={color} />;
-          // },
         }}>
         <Tab.Screen
           name="Main"
           component={MainScreen}
-          options={defaultScreenOptions}
+          options={{
+            ...defaultScreenOptions,
+            tabBarIcon: ({ focused }) => (
+              <Image
+                source={
+                  focused
+                    ? require('../assets/images/book_dark.png')
+                    : require('../assets/images/book.png')
+                }
+                style={{ width: 30, height: 30 }}
+              />
+            ),
+          }}
         />
         <Tab.Screen
           name="Search"
           component={SearchScreen}
-          options={defaultScreenOptions}
+          options={{
+            ...defaultScreenOptions,
+            tabBarIcon: ({ focused }) => (
+              <Image
+                source={
+                  focused
+                    ? require('../assets/images/search_dark.png')
+                    : require('../assets/images/search.png')
+                }
+                style={{ width: 28, height: 28 }}
+              />
+            ),
+          }}
         />
         <Tab.Screen
           name="Bookmark"
           component={BookmarkScreen}
-          options={defaultScreenOptions}
+          options={{
+            ...defaultScreenOptions,
+            tabBarIcon: ({ focused }) => (
+              <Image
+                source={
+                  focused
+                    ? require('../assets/images/document_dark.png')
+                    : require('../assets/images/document.png')
+                }
+                style={{ width: 26, height: 26 }}
+              />
+            ),
+          }}
         />
         <Tab.Screen
           name="User"
           component={UserScreen}
-          options={defaultScreenOptions}
+          options={{
+            ...defaultScreenOptions,
+            tabBarIcon: ({ focused }) => (
+              <Image
+                source={
+                  focused
+                    ? require('../assets/images/user_dark.png')
+                    : require('../assets/images/user.png')
+                }
+                style={{ width: 28, height: 28 }}
+              />
+            ),
+          }}
         />
       </Tab.Navigator>
     </NavigationContainer>

@@ -1,17 +1,15 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
+import ScreenLayout from '../Components/ScreenLayout';
+
 const BookmarkScreen = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#F7F7F7',
-      }}>
-      <Text>Bookmark Screen</Text>
-    </View>
+    <ScreenLayout>
+      <View>
+        <Text>Bookmark Screen</Text>
+      </View>
+    </ScreenLayout>
   );
 };
 

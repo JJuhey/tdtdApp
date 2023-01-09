@@ -4,6 +4,7 @@ import {
   createNativeStackNavigator,
   NativeStackNavigationOptions,
 } from '@react-navigation/native-stack';
+import ScreenLayout from '../Components/ScreenLayout';
 
 const defaultScreenOptions: NativeStackNavigationOptions = {
   headerStyle: { backgroundColor: '#F7F7F7' },
@@ -31,16 +32,12 @@ const AddScreen = () => {
 
 const MainScreen = ({ navigation }: any) => {
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#F7F7F7',
-      }}>
-      <Text>Home Screen</Text>
-      <Button title="Go to add" onPress={() => navigation.navigate('Add')} />
-    </View>
+    <ScreenLayout>
+      <View>
+        <Text>Home Screen</Text>
+        <Button title="Go to add" onPress={() => navigation.navigate('Add')} />
+      </View>
+    </ScreenLayout>
   );
 };
 
