@@ -8,7 +8,14 @@ const Header = () => {
         margin: 20,
         backgroundColor: '#F7F7F7',
       }}>
-      <Text style={{ color: '#B0918C', fontSize: 22 }}>토닥토닥</Text>
+      <Text
+        style={{
+          color: '#B0918C',
+          fontSize: 22,
+          fontFamily: 'NotoSerifKR-Regular',
+        }}>
+        토닥토닥
+      </Text>
     </View>
   );
 };

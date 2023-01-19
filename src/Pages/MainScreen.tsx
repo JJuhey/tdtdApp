@@ -8,6 +8,7 @@ import ScreenLayout from '../Components/ScreenLayout';
 
 const defaultScreenOptions: NativeStackNavigationOptions = {
   headerStyle: { backgroundColor: '#F7F7F7' },
+  headerTitleStyle: { fontFamily: 'NotoSerifKR-Regular', fontSize: 18 },
   contentStyle: { backgroundColor: '#F7F7F7' },
   headerTintColor: '#B0918C',
   headerShadowVisible: false,

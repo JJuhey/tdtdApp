@@ -32,7 +32,8 @@ const App = () => {
       <Tab.Navigator
         screenOptions={{
           headerShown: false,
-          tabBarShowLabel: false,
+          // tabBarShowLabel: false,
+          tabBarLabelStyle: { color: '#A8A8A8' },
         }}>
         <Tab.Screen
           name="Main"
