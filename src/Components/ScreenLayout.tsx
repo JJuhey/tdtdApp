@@ -12,7 +12,9 @@ const ScreenLayout = ({ children }: any) => {
       }}>
       <ScrollView>
         <Header />
-        <View style={{ marginLeft: 20 }}>{children}</View>
+        <View style={{ height: '100%', marginLeft: 20, marginRight: 20 }}>
+          {children}
+        </View>
       </ScrollView>
     </View>
   );
