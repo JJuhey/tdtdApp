@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, Alert } from 'react-native';
 import {
   createNativeStackNavigator,
   NativeStackNavigationOptions,
 } from '@react-navigation/native-stack';
 import ScreenLayout from '../Components/ScreenLayout';
+import CircleButton from '../Components/Buttons/CircleButton';
 
 const defaultScreenOptions: NativeStackNavigationOptions = {
   headerStyle: { backgroundColor: '#F7F7F7' },
@@ -37,6 +38,7 @@ const MainScreen = ({ navigation }: any) => {
       <View>
         <Text>Home Screen</Text>
         <Button title="Go to add" onPress={() => navigation.navigate('Add')} />
+        <CircleButton  onPress={() => Alert.alert('heello')} title="+"/>
       </View>
     </ScreenLayout>
   );
