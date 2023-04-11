@@ -1,13 +1,16 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+import ReadBookShape from '../Components/ReadBookShape';
 
 import ScreenLayout from '../Components/ScreenLayout';
+
+import ReadBooks from '../../assets/mockData';
 
 const UserScreen = () => {
   return (
     <ScreenLayout>
       <View>
-        <Text>User Screen</Text>
+        <ReadBookShape readBooks={ReadBooks} />
       </View>
     </ScreenLayout>
   );
