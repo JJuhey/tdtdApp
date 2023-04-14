@@ -3,8 +3,11 @@ import { View, Text, StyleSheet } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Label from '../Components/Label';
+import ReadBookShape from '../Components/ReadBookShape';
 
 import ScreenLayout from '../Components/ScreenLayout';
+
+import ReadBooks from '../../assets/mockData';
 
 const MainStack = createNativeStackNavigator();
 
@@ -37,7 +40,9 @@ const UserScreen = ({ navigation }: any) => {
     <ScreenLayout>
       <View>
         <Label title={USER_SCREEN_LABELS.READ_BOOK} total={totalReadBook} />
+        <ReadBookShape readBooks={ReadBooks} />
         <Label title={USER_SCREEN_LABELS.DONE_BOOK} total={totalDoneBook} />
+        <ReadBookShape readBooks={ReadBooks} />
         <Label
           title={USER_SCREEN_LABELS.FEEDBACK}
           onClickLabel={onClickLabel}
