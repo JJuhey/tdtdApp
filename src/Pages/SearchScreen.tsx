@@ -1,13 +1,18 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 
 import ScreenLayout from '../Components/ScreenLayout';
+import SearchInput from '../Components/SearchInput';
 
 const SearchScreen = () => {
+  const handleSubmit = (search: string) => {
+    // connect api with search string
+  };
+
   return (
     <ScreenLayout>
       <View>
-        <Text>Search Screen</Text>
+        <SearchInput handleSubmit={handleSubmit} />
       </View>
     </ScreenLayout>
   );
