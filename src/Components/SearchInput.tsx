@@ -33,15 +33,21 @@ const SearchInput = ({ handleSubmit }: PropsType) => {
 
 const styles = StyleSheet.create({
   container: {
+    borderWidth: 0,
     borderBottomWidth: 0,
     borderTopWidth: 0,
-    fontSize: 20,
-    backgroundColor: 'transparent',
-    color: 'white',
+    backgroundColor: 'white',
     width: '100%',
+    borderRadius: 5,
+    marginBottom: 20,
+    shadowOffset: { width: 1, height: 3 },
+    shadowColor: '#000',
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 4,
   },
-  inputContainer: { backgroundColor: 'white', borderRadius: 5 },
-  input: { color: '#FAD0C9' },
+  inputContainer: { backgroundColor: 'white', width: '100%' },
+  input: { color: '#FAD0C9', fontSize: 15, width: '100%' },
 });
 
 export default SearchInput;
